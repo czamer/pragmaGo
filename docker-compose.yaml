@@ -1,0 +1,12 @@
+services:
+  php:
+    build:
+      context: .
+      target: os
+    restart: on-failure
+    environment:
+      PHP_IDE_CONFIG: "serverName=dev"
+    tty: true
+    volumes:
+      - ./:/var/www
+
